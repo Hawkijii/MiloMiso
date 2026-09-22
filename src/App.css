@@ -1,0 +1,56 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #222222;
+}
+
+main {
+  width: 100%;
+}
+
+.placeholder-section {
+  width: 100%;
+  min-height: 600px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 100px 24px;
+
+  background: #ffffff;
+}
+
+.placeholder-section h2 {
+  margin: 0;
+
+  font-size: 48px;
+  line-height: 1.1;
+}
+
+.site-footer {
+  width: 100%;
+
+  padding: 42px 24px;
+
+  background: #ffffff;
+  color: #777777;
+
+  text-align: center;
+  font-size: 13px;
+}
+
+.site-footer p {
+  margin: 6px 0;
+}
+
+.site-footer a {
+  color: #222222;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.site-footer a:hover {
+  color: #ff5f35;
+}

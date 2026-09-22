@@ -1,0 +1,527 @@
+/* =========================================
+   AVAILABILITY
+========================================= */
+
+.availability {
+  width: 100%;
+  padding: 58px 24px 62px;
+  background: #ffffff;
+}
+
+.availability-container {
+  width: min(100%, 1180px);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  align-items: stretch;
+}
+
+.availability-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 8px 40px;
+
+  text-align: center;
+}
+
+.availability-item + .availability-item {
+  border-left: 1px solid #e9e3e1;
+}
+
+/* =========================================
+   AVAILABILITY ICON
+========================================= */
+
+.availability-icon {
+  width: 48px;
+  height: 48px;
+
+  margin-bottom: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f8e8e6;
+
+  border-radius: 50%;
+
+  color: #ff5f35;
+
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.availability-icon span {
+  display: block;
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   AVAILABILITY CONTENT
+========================================= */
+
+.availability-content h2 {
+  margin: 0 0 10px;
+
+  color: #171717;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  line-height: 1.15;
+  letter-spacing: -0.35px;
+}
+
+.availability-content p {
+  margin: 4px 0;
+
+  color: #6c6663;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  line-height: 1.5;
+}
+
+.availability-content a {
+  display: inline-block;
+
+  margin-top: 5px;
+
+  color: #ff5f35;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.availability-content a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================
+   SERVICES DIVIDER
+========================================= */
+
+.services-divider {
+  width: min(100% - 48px, 1180px);
+  margin: 0 auto;
+}
+
+.services-divider hr {
+  height: 1px;
+  margin: 0;
+
+  border: 0;
+  background: #e8e1df;
+}
+
+/* =========================================
+   SERVICES SECTION
+========================================= */
+
+.services {
+  width: 100%;
+  padding: 76px 24px 100px;
+
+  background: #ffffff;
+}
+
+.services-container {
+  width: min(100%, 1180px);
+  margin: 0 auto;
+}
+
+/* =========================================
+   SERVICES HEADING
+========================================= */
+
+.services-heading {
+  margin-bottom: 42px;
+
+  text-align: center;
+}
+
+.services-eyebrow {
+  margin: 0 0 9px;
+
+  color: #ff5f35;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+}
+
+.services-heading h2 {
+  margin: 0;
+
+  color: #171717;
+
+  font-size: clamp(36px, 4vw, 50px);
+  font-weight: 700;
+
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+/* =========================================
+   SERVICES GRID
+========================================= */
+
+.services-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+/* =========================================
+   SERVICE CARD
+========================================= */
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 350px;
+
+  padding: 18px;
+
+  background: #f8e8e6;
+
+  border-radius: 28px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 14px 35px rgba(40, 25, 20, 0.08);
+}
+
+/* =========================================
+   SERVICE MAIN
+========================================= */
+
+.service-main {
+  display: grid;
+
+  grid-template-columns: 0.95fr 1.05fr;
+
+  gap: 16px;
+
+  align-items: stretch;
+}
+
+/* =========================================
+   SERVICE IMAGE
+========================================= */
+
+.service-image {
+  width: 100%;
+  height: 170px;
+
+  background: #f3d8d5;
+
+  border-radius: 20px;
+}
+
+/*
+  Empty on purpose.
+  Add your Figma illustration inside.
+*/
+
+/* =========================================
+   SERVICE INFO
+========================================= */
+
+.service-info {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  min-width: 0;
+}
+
+.service-info h3 {
+  margin: 0 0 10px;
+
+  color: #171717;
+
+  font-size: 19px;
+  font-weight: 700;
+
+  line-height: 1.1;
+  letter-spacing: -0.55px;
+}
+
+.service-info p {
+  margin: 0;
+
+  color: #5e5855;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  line-height: 1.5;
+}
+
+/* =========================================
+   PRICE + DURATION
+========================================= */
+
+.service-meta {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.service-pill {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 38px;
+
+  padding: 8px 12px;
+
+  background: #ffffff;
+
+  border-radius: 999px;
+
+  color: #171717;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-align: center;
+}
+
+/* =========================================
+   CTA
+========================================= */
+
+.service-button {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 42px;
+
+  margin-top: 10px;
+  padding: 10px 16px;
+
+  background: #e95f0e;
+  color: #ffffff;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-align: center;
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.service-button:hover {
+  background: #ff5f35;
+
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .availability-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .availability-item {
+    padding: 8px 20px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .availability {
+    padding: 44px 20px 46px;
+  }
+
+  .availability-container {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+  .availability-item {
+    padding: 24px 0;
+  }
+
+  .availability-item + .availability-item {
+    border-left: none;
+    border-top: 1px solid #e9e3e1;
+  }
+
+  .availability-icon {
+    width: 44px;
+    height: 44px;
+
+    margin-bottom: 13px;
+
+    font-size: 20px;
+  }
+
+  .availability-content h2 {
+    font-size: 17px;
+  }
+
+  .availability-content p {
+    font-size: 13px;
+  }
+
+  .services-divider {
+    width: calc(100% - 36px);
+  }
+
+  .services {
+    padding: 62px 18px 80px;
+  }
+
+  .services-heading {
+    margin-bottom: 32px;
+  }
+
+  .services-eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.8px;
+  }
+
+  .services-heading h2 {
+    font-size: 36px;
+    letter-spacing: -1.5px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .service-card {
+    min-height: 315px;
+
+    padding: 15px;
+
+    border-radius: 24px;
+  }
+
+  .service-main {
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 13px;
+  }
+
+  .service-image {
+    height: 145px;
+
+    border-radius: 17px;
+  }
+
+  .service-info h3 {
+    font-size: 17px;
+  }
+
+  .service-info p {
+    font-size: 12px;
+  }
+
+  .service-pill {
+    font-size: 11.5px;
+  }
+
+  .service-button {
+    min-height: 40px;
+
+    font-size: 11.5px;
+  }
+}
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 400px) {
+  .availability {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .services {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .service-card {
+    min-height: 300px;
+  }
+
+  .service-main {
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 11px;
+  }
+
+  .service-image {
+    height: 130px;
+  }
+
+  .service-info h3 {
+    font-size: 16px;
+  }
+
+  .service-info p {
+    font-size: 11.5px;
+  }
+
+  .service-pill {
+    font-size: 11px;
+  }
+
+  .service-button {
+    min-height: 38px;
+
+    font-size: 11px;
+  }
+}
