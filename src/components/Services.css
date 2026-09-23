@@ -525,3 +525,22 @@
     font-size: 11px;
   }
 }
+.service-image {
+  width: 100%;
+  height: 170px;
+
+  overflow: hidden;
+
+  background: #f3d8d5;
+  border-radius: 20px;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}

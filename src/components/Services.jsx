@@ -1,5 +1,13 @@
 import "./Services.css";
 
+import Petbath from "../assets/petbath.svg";
+import Vetcheck from "../assets/vetcheck.svg";
+import Nailtrim from "../assets/nailtrim.svg";
+import Dentalcare from "../assets/dentalcare.svg";
+import Grooming from "../assets/grooming.svg";
+import Vaccine from "../assets/vaccine.svg";
+
+import { Mail, Clock3, MapPin } from "lucide-react";
 const services = [
   {
     title: "PET BATH",
@@ -7,6 +15,7 @@ const services = [
       "A gentle bath and basic grooming session to leave your pet feeling clean, fresh, and comfortable.",
     price: "$50",
     duration: "2 hours",
+    image: Petbath,
   },
   {
     title: "VET CHECKUP",
@@ -14,6 +23,7 @@ const services = [
       "A regular health check to make sure your pet is doing well and to catch small concerns early.",
     price: "$35",
     duration: "1 hour",
+    image: Vetcheck,
   },
   {
     title: "NAIL TRIM",
@@ -21,6 +31,7 @@ const services = [
       "A careful nail trim that helps keep your pet comfortable and makes everyday movement easier.",
     price: "$20",
     duration: "30 min",
+    image: Nailtrim,
   },
   {
     title: "VACCINATION",
@@ -28,6 +39,7 @@ const services = [
       "Routine vaccinations to help protect your pet from common illnesses and keep their care on track.",
     price: "$45",
     duration: "45 min",
+    image: Vaccine,
   },
   {
     title: "DENTAL CARE",
@@ -35,6 +47,7 @@ const services = [
       "A simple dental check and cleaning to help keep your pet's teeth, gums, and breath in good shape.",
     price: "$60",
     duration: "1 hour",
+    image: Dentalcare,
   },
   {
     title: "GROOMING",
@@ -42,6 +55,7 @@ const services = [
       "A neat and comfortable grooming session tailored to your pet's coat, needs, and overall comfort.",
     price: "$55",
     duration: "2 hours",
+    image: Grooming,
   },
 ];
 
@@ -59,8 +73,7 @@ export default function Services() {
 
           <div className="availability-item">
             <div className="availability-icon">
-              {/* Replace this with your own icon/image */}
-              <span>+</span>
+              <Mail size={28} strokeWidth={2} />
             </div>
 
             <div className="availability-content">
@@ -72,8 +85,7 @@ export default function Services() {
 
           <div className="availability-item">
             <div className="availability-icon">
-              {/* Replace this with your own icon/image */}
-              <span>⌁</span>
+              <Clock3 size={28} strokeWidth={2} />
             </div>
 
             <div className="availability-content">
@@ -85,8 +97,7 @@ export default function Services() {
 
           <div className="availability-item">
             <div className="availability-icon">
-              {/* Replace this with your own icon/image */}
-              <span>⌖</span>
+              <MapPin size={28} strokeWidth={2} />
             </div>
 
             <div className="availability-content">
@@ -128,8 +139,14 @@ export default function Services() {
 
                   {/* Illustration area */}
                   <div className="service-image">
-                    {/* Replace this with your Figma illustration */}
-                  </div>
+                    {service.image && (
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        loading="lazy"
+                      />
+                    )}
+                </div>
 
                   {/* Service information */}
                   <div className="service-info">

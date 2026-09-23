@@ -1,38 +1,67 @@
 import { useEffect, useRef, useState } from "react";
 import logo from "../assets/milo-miso-logo.svg";
+
+import Petbath from "../assets/petbath.svg";
+import Vetcheck from "../assets/vetcheck.svg";
+import Nailtrim from "../assets/nailtrim.svg";
+import Dentalcare from "../assets/dentalcare.svg";
+import Grooming from "../assets/grooming.svg";
+import Vaccine from "../assets/vaccine.svg";
+
 import "./Navbar.css";
 
 const SERVICES = [
   {
-    title: "Wellness Exams",
-    description: "Routine checkups to keep pets happy and healthy.",
+    title: "PET BATH",
+    description:
+      "A gentle bath and basic grooming session to leave your pet feeling clean, fresh, and comfortable.",
+    image: Petbath,
   },
   {
-    title: "Vaccinations",
-    description: "Essential protection for dogs and cats.",
+    title: "VET CHECKUP",
+    description:
+      "A regular health check to make sure your pet is doing well and to catch small concerns early.",
+    image: Vetcheck,
   },
   {
-    title: "Dental Care",
-    description: "Gentle care for healthier teeth and gums.",
+    title: "NAIL TRIM",
+    description:
+      "A careful nail trim that helps keep your pet comfortable and makes everyday movement easier.",
+    image: Nailtrim,
   },
   {
-    title: "Diagnostics",
-    description: "Careful testing when answers matter.",
+    title: "VACCINATION",
+    description:
+      "Routine vaccinations to help protect your pet from common illnesses and keep their care on track.",
+    image: Vaccine,
   },
   {
-    title: "Surgery & Treatment",
-    description: "Professional care when they need it most.",
+    title: "DENTAL CARE",
+    description:
+      "A simple dental check and cleaning to help keep your pet's teeth, gums, and breath in good shape.",
+    image: Dentalcare,
   },
   {
-    title: "Preventive Care",
-    description: "Helping pets stay healthy every day.",
+    title: "GROOMING",
+    description:
+      "A neat and comfortable grooming session tailored to your pet's coat, needs, and overall comfort.",
+    image: Grooming,
   },
 ];
 
 const NAV_LINKS = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Team", href: "#team" },
+  {
+    label: "Home",
+    href: "#home",
+  },
+  {
+    label: "About",
+    href: "#about",
+  },
+  {
+    label: "Team",
+    href: "#team",
+  },
 ];
 
 export default function Navbar() {
@@ -63,11 +92,21 @@ export default function Navbar() {
     setMenuOpen(false);
   };
 
+  const toggleServices = () => {
+    setServicesOpen((prev) => !prev);
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+  };
+
   return (
     <header className="navbar">
       <div className="navbar-container">
 
-        {/* LOGO */}
+        {/* =========================================
+            LOGO
+        ========================================= */}
         <a
           href="#home"
           className="navbar-logo"
@@ -80,10 +119,19 @@ export default function Navbar() {
           />
         </a>
 
-        {/* DESKTOP NAV */}
-        <nav className="navbar-links" aria-label="Main navigation">
-
-          <a href="#home">Home</a>
+        {/* =========================================
+            DESKTOP NAVIGATION
+        ========================================= */}
+        <nav
+          className="navbar-links"
+          aria-label="Main navigation"
+        >
+          <a
+            href="#home"
+            onClick={closeMenus}
+          >
+            Home
+          </a>
 
           {/* SERVICES DROPDOWN */}
           <div
@@ -95,9 +143,7 @@ export default function Navbar() {
               className={`services-trigger ${
                 servicesOpen ? "is-open" : ""
               }`}
-              onClick={() =>
-                setServicesOpen((prev) => !prev)
-              }
+              onClick={toggleServices}
               aria-expanded={servicesOpen}
               aria-haspopup="true"
             >
@@ -113,14 +159,16 @@ export default function Navbar() {
                 servicesOpen ? "is-visible" : ""
               }`}
             >
+              {/* DROPDOWN HEADER */}
               <div className="dropdown-header">
                 <span>OUR SERVICES</span>
 
                 <h3>
-                  Care for every wag & purr.
+                  Care for every wag &amp; purr.
                 </h3>
               </div>
 
+              {/* SERVICES */}
               <div className="services-dropdown-grid">
                 {SERVICES.map((service) => (
                   <a
@@ -129,11 +177,17 @@ export default function Navbar() {
                     className="service-dropdown-item"
                     onClick={closeMenus}
                   >
-                    {/* Illustration goes here later */}
+                    {/* IMAGE */}
                     <div className="service-illustration">
-                      {/* <img src={...} alt="" /> */}
+                      {service.image && (
+                        <img
+                          src={service.image}
+                          alt=""
+                        />
+                      )}
                     </div>
 
+                    {/* TEXT */}
                     <div className="service-dropdown-text">
                       <h4>{service.title}</h4>
 
@@ -143,6 +197,7 @@ export default function Navbar() {
                 ))}
               </div>
 
+              {/* VIEW ALL */}
               <a
                 href="#services"
                 className="dropdown-footer-link"
@@ -154,34 +209,38 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* OTHER NAV LINKS */}
+          {/* ABOUT + TEAM */}
           {NAV_LINKS.slice(1).map((link) => (
             <a
               key={link.href}
               href={link.href}
+              onClick={closeMenus}
             >
               {link.label}
             </a>
           ))}
         </nav>
 
-        {/* DESKTOP CTA */}
+        {/* =========================================
+            DESKTOP CTA
+        ========================================= */}
         <a
           href="#contact"
           className="navbar-button"
+          onClick={closeMenus}
         >
           Contact us
         </a>
 
-        {/* MOBILE MENU BUTTON */}
+        {/* =========================================
+            MOBILE MENU BUTTON
+        ========================================= */}
         <button
           type="button"
           className={`menu-toggle ${
             menuOpen ? "active" : ""
           }`}
-          onClick={() =>
-            setMenuOpen((prev) => !prev)
-          }
+          onClick={toggleMenu}
           aria-label={
             menuOpen
               ? "Close navigation"
@@ -195,22 +254,26 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* MOBILE MENU */}
+      {/* =========================================
+          MOBILE MENU
+      ========================================= */}
       <div
         className={`mobile-menu ${
           menuOpen ? "open" : ""
         }`}
       >
-        <a href="#home" onClick={closeMenus}>
+        <a
+          href="#home"
+          onClick={closeMenus}
+        >
           Home
         </a>
 
+        {/* MOBILE SERVICES */}
         <button
           type="button"
           className="mobile-services-trigger"
-          onClick={() =>
-            setServicesOpen((prev) => !prev)
-          }
+          onClick={toggleServices}
           aria-expanded={servicesOpen}
         >
           <span>Services</span>
@@ -234,12 +297,23 @@ export default function Navbar() {
               key={service.title}
               href="#services"
               onClick={closeMenus}
+              className="mobile-service-item"
             >
-              {service.title}
+              {service.image && (
+                <span className="mobile-service-image">
+                  <img
+                    src={service.image}
+                    alt=""
+                  />
+                </span>
+              )}
+
+              <span>{service.title}</span>
             </a>
           ))}
         </div>
 
+        {/* ABOUT + TEAM */}
         {NAV_LINKS.slice(1).map((link) => (
           <a
             key={link.href}
@@ -250,6 +324,7 @@ export default function Navbar() {
           </a>
         ))}
 
+        {/* MOBILE CTA */}
         <a
           href="#contact"
           className="mobile-cta"

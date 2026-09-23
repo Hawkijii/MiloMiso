@@ -1,0 +1,391 @@
+/* =========================================
+   TEAM SECTION
+========================================= */
+
+.team {
+  width: 100%;
+
+  background: #fff3e5;
+
+  padding: 100px 24px 110px;
+
+  box-sizing: border-box;
+}
+
+.team-container {
+  width: min(100%, 1180px);
+  margin: 0 auto;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.team-heading {
+  margin-bottom: 52px;
+
+  text-align: center;
+}
+
+.team-eyebrow {
+  display: inline-block;
+
+  margin: 0 0 14px;
+  padding: 7px 14px;
+
+  background: #ffffff;
+  color: #1a1f36;
+
+  border-radius: 999px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.team-heading h2 {
+  margin: 0;
+
+  color: #1a1f36;
+
+  font-size: clamp(38px, 4.5vw, 58px);
+  font-weight: 700;
+
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+/* =========================================
+   TEAM GRID
+========================================= */
+
+.team-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+/* =========================================
+   TEAM CARD
+========================================= */
+
+.team-card {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 350px;
+
+  padding: 32px 24px 24px;
+
+  background: #ffffff;
+
+  border: 1.5px solid #1a1f36;
+  border-radius: 24px;
+
+  text-align: center;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* =========================================
+   COLORED BOTTOM SHADOWS
+========================================= */
+
+.team-card-purple {
+  box-shadow: 0 10px 0 #6d5aa8;
+}
+
+.team-card-coral {
+  box-shadow: 0 10px 0 #ff7a59;
+}
+
+.team-card-yellow {
+  box-shadow: 0 10px 0 #f2d66d;
+}
+
+/* =========================================
+   CARD HOVER
+========================================= */
+
+.team-card:hover {
+  transform: translateY(-6px);
+}
+
+/* =========================================
+   PROFILE IMAGE
+========================================= */
+
+.team-avatar {
+  width: 118px;
+  height: 118px;
+
+  margin-bottom: 22px;
+
+  overflow: hidden;
+
+  background: #f8e8e6;
+
+  border-radius: 50%;
+
+  flex-shrink: 0;
+}
+
+.team-avatar img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/* =========================================
+   MEMBER INFO
+========================================= */
+
+.team-info h3 {
+  margin: 0 0 7px;
+
+  color: #1a1f36;
+
+  font-size: 19px;
+  font-weight: 700;
+
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+}
+
+.team-info p {
+  margin: 0;
+
+  color: #6c6663;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  line-height: 1.5;
+}
+
+/* =========================================
+   CONTACT LINKS
+========================================= */
+
+.team-socials {
+  display: flex;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-top: auto;
+  padding-top: 28px;
+}
+
+.team-social {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border: 1px solid #ded8d4;
+  border-radius: 50%;
+
+  color: #1a1f36;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.team-social:hover {
+  background: #ff7a59;
+  border-color: #ff7a59;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   NEXT BUTTON
+========================================= */
+
+.team-next {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 48px auto 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #1a1f36;
+  color: #ffffff;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.team-next:hover {
+  background: #ff7a59;
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .team {
+    padding: 85px 24px 95px;
+  }
+
+  .team-grid {
+    gap: 18px;
+  }
+
+  .team-card {
+    padding: 28px 18px 22px;
+  }
+
+  .team-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-info h3 {
+    font-size: 17px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .team {
+    padding: 72px 18px 85px;
+  }
+
+  .team-heading {
+    margin-bottom: 38px;
+  }
+
+  .team-eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.7px;
+  }
+
+  .team-heading h2 {
+    font-size: 36px;
+    letter-spacing: -1.4px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .team-card {
+    min-height: 320px;
+
+    padding: 28px 22px 22px;
+  }
+
+  .team-avatar {
+    width: 105px;
+    height: 105px;
+  }
+}
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 400px) {
+  .team {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .team-heading h2 {
+    font-size: 32px;
+  }
+
+  .team-card {
+    min-height: 305px;
+
+    border-radius: 20px;
+  }
+
+  .team-avatar {
+    width: 95px;
+    height: 95px;
+  }
+
+  .team-info h3 {
+    font-size: 17px;
+  }
+}
+.team-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #1A1F36;
+  background: #F8E8E6;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.team-social svg {
+  display: block;
+}
+
+.team-social:hover {
+  transform: translateY(-2px);
+  background: #FFDCD4;
+}
+
+.team-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-next svg {
+  display: block;
+}

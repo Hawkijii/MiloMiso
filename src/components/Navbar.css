@@ -1,3 +1,7 @@
+/* =========================================
+   NAVBAR
+========================================= */
+
 .navbar {
   width: 100%;
   position: sticky;
@@ -11,19 +15,21 @@
 .navbar-container {
   width: min(100% - 48px, 1180px);
   height: 82px;
+
   margin: 0 auto;
 
   display: flex;
   align-items: center;
 }
 
-/* =========================
+/* =========================================
    LOGO
-========================= */
+========================================= */
 
 .navbar-logo {
   display: flex;
   align-items: center;
+
   flex-shrink: 0;
 
   text-decoration: none;
@@ -35,13 +41,14 @@
   height: auto;
 }
 
-/* =========================
+/* =========================================
    DESKTOP NAVIGATION
-========================= */
+========================================= */
 
 .navbar-links {
   display: flex;
   align-items: center;
+
   gap: 38px;
 
   margin-left: auto;
@@ -53,15 +60,15 @@
   color: #222222;
 
   font-family: inherit;
+
   font-size: 16px;
   font-weight: 500;
+
   line-height: 1;
 
   text-decoration: none;
 
-  transition:
-    color 0.2s ease,
-    transform 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .navbar-links > a:hover,
@@ -69,9 +76,9 @@
   color: #ff5f35;
 }
 
-/* =========================
+/* =========================================
    SERVICES TRIGGER
-========================= */
+========================================= */
 
 .services-wrapper {
   position: relative;
@@ -80,11 +87,13 @@
 .services-trigger {
   display: inline-flex;
   align-items: center;
+
   gap: 6px;
 
   padding: 8px 0;
 
   border: none;
+
   background: transparent;
 
   cursor: pointer;
@@ -101,12 +110,13 @@
   transform: rotate(180deg);
 }
 
-/* =========================
+/* =========================================
    SERVICES DROPDOWN
-========================= */
+========================================= */
 
 .services-dropdown {
   position: absolute;
+
   top: calc(100% + 18px);
   left: 50%;
 
@@ -143,12 +153,15 @@
   transform: translate(-50%, 0);
 }
 
-/* Dropdown arrow */
+/* =========================================
+   DROPDOWN ARROW
+========================================= */
 
 .services-dropdown::before {
   content: "";
 
   position: absolute;
+
   top: -7px;
   left: 50%;
 
@@ -163,9 +176,9 @@
   transform: translateX(-50%) rotate(45deg);
 }
 
-/* =========================
+/* =========================================
    DROPDOWN HEADER
-========================= */
+========================================= */
 
 .dropdown-header {
   padding-bottom: 20px;
@@ -180,6 +193,7 @@
 
   font-size: 11px;
   font-weight: 700;
+
   letter-spacing: 1.4px;
 }
 
@@ -190,34 +204,39 @@
 
   font-size: 24px;
   font-weight: 650;
+
   line-height: 1.2;
   letter-spacing: -0.6px;
 }
 
-/* =========================
+/* =========================================
    SERVICE GRID
-========================= */
+========================================= */
 
 .services-dropdown-grid {
   display: grid;
+
   grid-template-columns: repeat(2, 1fr);
 
   gap: 8px;
 }
 
-/* =========================
+/* =========================================
    SERVICE ITEM
-========================= */
+========================================= */
 
 .service-dropdown-item {
   display: flex;
   align-items: center;
+
   gap: 14px;
 
   min-height: 82px;
+
   padding: 10px;
 
   color: inherit;
+
   text-decoration: none;
 
   border-radius: 15px;
@@ -229,12 +248,16 @@
 
 .service-dropdown-item:hover {
   background: #fff7f4;
+
   transform: translateY(-1px);
 }
 
-/* =========================
-   ILLUSTRATION AREA
-========================= */
+/* =========================================
+   SERVICE ILLUSTRATION
+   IMPORTANT:
+   Transparent wrapper because the SVG
+   already has its own colored background.
+========================================= */
 
 .service-illustration {
   width: 58px;
@@ -246,25 +269,33 @@
   align-items: center;
   justify-content: center;
 
-  background: #fff1c9;
+  background: transparent;
 
   border-radius: 16px;
 
   overflow: hidden;
 }
 
-/* Later, your SVG goes inside this box */
-
 .service-illustration img {
-  width: 44px;
-  height: 44px;
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 0;
 
   object-fit: contain;
+
+  border-radius: 16px;
 }
 
-/* =========================
+/* =========================================
    SERVICE TEXT
-========================= */
+========================================= */
+
+.service-dropdown-text {
+  min-width: 0;
+}
 
 .service-dropdown-text h4 {
   margin: 0 0 5px;
@@ -273,6 +304,7 @@
 
   font-size: 14px;
   font-weight: 650;
+
   line-height: 1.2;
 }
 
@@ -282,12 +314,13 @@
   color: #777777;
 
   font-size: 12px;
+
   line-height: 1.45;
 }
 
-/* =========================
+/* =========================================
    DROPDOWN FOOTER
-========================= */
+========================================= */
 
 .dropdown-footer-link {
   display: flex;
@@ -317,9 +350,9 @@
   transform: translateX(4px);
 }
 
-/* =========================
+/* =========================================
    DESKTOP CTA
-========================= */
+========================================= */
 
 .navbar-button {
   display: inline-flex;
@@ -349,23 +382,26 @@
 
 .navbar-button:hover {
   background: #f6532b;
+
   transform: translateY(-2px);
 
   box-shadow: 0 8px 18px rgba(255, 95, 53, 0.16);
 }
 
-/* =========================
+/* =========================================
    MOBILE TOGGLE
-========================= */
+========================================= */
 
 .menu-toggle {
   display: none;
 
   width: 42px;
   height: 42px;
+
   padding: 8px;
 
   border: none;
+
   background: transparent;
 
   cursor: pointer;
@@ -376,6 +412,7 @@
 
   width: 24px;
   height: 2px;
+
   margin: 5px auto;
 
   background: #222222;
@@ -395,9 +432,9 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* =========================
+/* =========================================
    MOBILE MENU
-========================= */
+========================================= */
 
 .mobile-menu {
   display: none;
@@ -416,13 +453,16 @@
   border-bottom: 1px solid #f1f1f1;
 
   background: transparent;
+
   color: #222222;
 
   font: inherit;
+
   font-size: 16px;
   font-weight: 500;
 
   cursor: pointer;
+
   text-align: left;
 }
 
@@ -438,6 +478,7 @@
 
 .mobile-services-list {
   max-height: 0;
+
   overflow: hidden;
 
   padding-left: 12px;
@@ -446,27 +487,93 @@
 }
 
 .mobile-services-list.open {
-  max-height: 400px;
+  max-height: 500px;
 }
 
-.mobile-services-list a {
-  display: block;
+/* =========================================
+   MOBILE SERVICE ITEM
+========================================= */
+
+.mobile-service-item {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
 
   padding: 10px 4px;
 
   color: #777777;
 
   font-size: 14px;
+
   text-decoration: none;
+
+  transition: color 0.2s ease;
 }
 
-.mobile-services-list a:hover {
+.mobile-service-item:hover {
   color: #ff5f35;
 }
 
-/* =========================
+/* =========================================
+   MOBILE SERVICE IMAGE
+   Transparent wrapper — SVG already
+   contains its own background.
+========================================= */
+
+.mobile-service-image {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.mobile-service-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  padding: 0;
+
+  object-fit: contain;
+
+  border-radius: 10px;
+}
+
+/* =========================================
+   MOBILE CTA
+========================================= */
+
+.mobile-cta {
+  justify-content: center;
+
+  margin-top: 14px;
+
+  padding: 13px 20px !important;
+
+  background: #ff5f35;
+
+  color: #ffffff !important;
+
+  border: none !important;
+
+  border-radius: 999px;
+}
+
+/* =========================================
    RESPONSIVE
-========================= */
+========================================= */
 
 @media (max-width: 850px) {
   .navbar-container {
@@ -481,6 +588,7 @@
 
   .menu-toggle {
     display: block;
+
     margin-left: auto;
   }
 
@@ -489,11 +597,13 @@
     flex-direction: column;
 
     max-height: 0;
+
     overflow: hidden;
 
     padding: 0 16px;
 
     background: #ffffff;
+
     border-top: 1px solid transparent;
 
     transition:
@@ -503,7 +613,7 @@
   }
 
   .mobile-menu.open {
-    max-height: 650px;
+    max-height: 700px;
 
     padding: 12px 16px 22px;
 
@@ -526,23 +636,14 @@
     border-bottom: 1px solid #f1f1f1;
   }
 
-  .mobile-cta {
-    justify-content: center;
-
-    margin-top: 14px;
-    padding: 13px 20px !important;
-
-    background: #ff5f35;
-    color: #ffffff !important;
-
-    border: none !important;
-    border-radius: 999px;
+  .mobile-menu > a:hover {
+    color: #ff5f35;
   }
 }
 
-/* =========================
+/* =========================================
    SMALL MOBILE
-========================= */
+========================================= */
 
 @media (max-width: 480px) {
   .navbar-container {
